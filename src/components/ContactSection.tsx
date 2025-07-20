@@ -9,10 +9,21 @@ import {
   MapPin, 
   Clock,
   Star,
-  Coffee
+  Coffee,
+  Instagram,
+  MessageSquare
 } from "lucide-react";
 
 export const ContactSection = () => {
+  const handleSocialClick = (platform: string) => {
+    const socialLinks = {
+      instagram: 'https://www.instagram.com/dkandang_homestay',
+      whatsapp: 'https://wa.me/60193804610'
+    };
+    
+    window.open(socialLinks[platform as keyof typeof socialLinks], '_blank');
+  };
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -91,9 +102,16 @@ export const ContactSection = () => {
                     <p className="text-sm text-muted-foreground">Usually within 1 hour</p>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full">
-                  Call: +1 (555) 123-4567
-                </Button>
+                <div className="space-y-2">
+                  <Button variant="outline" className="w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call: +6019-380-XXXX
+                  </Button>
+                  <Button variant="outline" className="w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call: +6019-380-XXXX
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -104,13 +122,28 @@ export const ContactSection = () => {
                     <Mail className="w-6 h-6 text-homestay-earth" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Email Us</h4>
-                    <p className="text-sm text-muted-foreground">Detailed inquiries</p>
+                    <h4 className="font-semibold text-foreground">Follow us</h4>
+                    <p className="text-sm text-muted-foreground">Social Media</p>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full">
-                  hello@ourhomestay.com
-                </Button>
+                <div className="space-y-2">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => handleSocialClick('instagram')}
+                  >
+                    <Instagram className="w-4 h-4 mr-2" />
+                    Instagram
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => handleSocialClick('whatsapp')}
+                  >
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                    WhatsApp
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -122,13 +155,13 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Location</h4>
-                    <p className="text-sm text-muted-foreground">Heritage District</p>
+                    <p className="text-sm text-muted-foreground">Tanjong Karang, Selangor</p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Downtown Heritage District<br />
-                  5 minutes to City Center<br />
-                  Walking distance to attractions
+                  Lot 4578, Jalan Masjid 3<br />
+                  Kampung Sri Tiram Jaya, 45500<br />
+                  Tanjong Karang, Selangor
                 </p>
               </CardContent>
             </Card>
@@ -148,10 +181,6 @@ export const ContactSection = () => {
                     <span>Messages:</span>
                     <span>Within 1 hour</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Booking requests:</span>
-                    <span>Within 30 minutes</span>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -160,15 +189,32 @@ export const ContactSection = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="text-muted-foreground mb-6">
-            Have special requirements or planning a longer stay? 
-            <br className="hidden sm:block" />
-            We'd love to create a custom experience just for you.
-          </p>
-          <Button variant="warm" size="xl">
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Start Conversation
-          </Button>
+
+          {/* Tech Stack & Copyright */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <div className="mb-6">
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3">Built with modern technology</h4>
+              <div className="flex flex-wrap justify-center gap-2 text-xs">
+                <Badge variant="outline" className="text-muted-foreground">React</Badge>
+                <Badge variant="outline" className="text-muted-foreground">TypeScript</Badge>
+                <Badge variant="outline" className="text-muted-foreground">Tailwind CSS</Badge>
+                <Badge variant="outline" className="text-muted-foreground">Vite</Badge>
+                <Badge variant="outline" className="text-muted-foreground">Lucide Icons</Badge>
+                <Badge variant="outline" className="text-muted-foreground">Shadcn/ui</Badge>
+              </div>
+            </div>
+            
+            <div className="text-xs text-muted-foreground">
+              <p className="mb-2">
+                © {new Date().getFullYear()} D'Kandang Homestay. All rights reserved.
+              </p>
+              <p>
+                Website designed and developed for authentic homestay experiences.
+                <br className="hidden sm:block" />
+                Built using React, TypeScript, and modern web technologies.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
