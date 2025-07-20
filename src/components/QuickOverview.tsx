@@ -1,15 +1,15 @@
-import { Wifi, ChefHat, Car, Coffee, Bath, Tv, Shield, Heart } from "lucide-react";
+import { Wifi, ChefHat, Car, Activity, Bath, Tv, Shield, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const amenities = [
-  { icon: Wifi, label: "High-Speed WiFi", description: "Work comfortably" },
-  { icon: ChefHat, label: "Full Kitchen", description: "Cook with ease" },
-  { icon: Car, label: "Free Parking", description: "Secure & convenient" },
-  { icon: Coffee, label: "Coffee Station", description: "Fresh every morning" },
-  { icon: Bath, label: "Premium Bath", description: "Luxury amenities" },
-  { icon: Tv, label: "Smart TV", description: "Netflix & streaming" },
-  { icon: Shield, label: "Safe & Secure", description: "24/7 monitored" },
-  { icon: Heart, label: "Pet Friendly", description: "Bring your furry friend" },
+  { icon: Wifi, label: "Kemudahan Wi-Fi", description: "Bekerja dengan selesa" },
+  { icon: ChefHat, label: "Dapur Lengkap", description: "Masak dengan mudah" },
+  { icon: Car, label: "Tempat Letak Kereta Percuma", description: "Selamat & mudah" },
+  { icon: Activity, label: "Sukan dan Rekreasi", description: "Aktiviti luar yang menyeronokkan" },
+  { icon: Bath, label: "Kolam Renang", description: "Berenang dengan selesa" },
+  { icon: Tv, label: "TV Pintar", description: "Astro & Penstriman" },
+  { icon: Shield, label: "Selamat & Terjamin", description: "Kawasan Berpagar" },
+  { icon: Heart, label: "Mesra Haiwan Peliharaan", description: "Mancing bersama keluarga" },
 ];
 
 export const QuickOverview = () => {
@@ -18,10 +18,10 @@ export const QuickOverview = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Everything You Need
+            Kemudahan Disediakan
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Thoughtfully designed amenities to make your stay comfortable and memorable
+            Kemudahan yang direka dengan teliti untuk memastikan penginapan anda selesa dan tidak dapat dilupakan.
           </p>
         </div>
 
