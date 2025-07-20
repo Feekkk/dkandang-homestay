@@ -60,30 +60,41 @@ export const ContactSection = () => {
                 Ready to Book Your Stay?
               </h3>
               
-              <p className="text-white/90 mb-8 leading-relaxed">
+              <p className="text-white/90 mb-6 leading-relaxed">
                 Check our real-time availability and secure your dates. 
                 Special rates available for extended stays of 7+ nights.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-2xl font-bold mb-1">$125</div>
+                  <div className="text-2xl font-bold mb-1">RM 180</div>
                   <div className="text-white/80 text-sm">per night (avg)</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="text-2xl font-bold mb-1">7+ days</div>
-                  <div className="text-white/80 text-sm">15% discount</div>
+                  <div className="text-white/80 text-sm">Open for booking except for any blackout dates</div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="outline" size="lg" className="bg-white text-homestay-earth hover:bg-white/90 border-white flex-1">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Check Availability
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button 
+                  variant="secondary" 
+                  size="lg" 
+                  className="flex-1 bg-white text-homestay-earth hover:bg-white/90"
+                  onClick={() => handleSocialClick('whatsapp')}
+                >
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Book via WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm flex-1">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Ask Questions
+                <Button 
+                  variant="secondary" 
+                  size="lg" 
+                  className="flex-1 bg-white text-homestay-earth hover:bg-white/90"
+                  onClick={() => handleSocialClick('whatsapp')}
+                >
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Book via Call
                 </Button>
               </div>
             </CardContent>
