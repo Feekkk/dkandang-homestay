@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, MapPin, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-homestay.jpg";
+import heroImage from "@/assets/bgm.png";
 
 export const HeroSection = () => {
+  const handleDirectionsClick = () => {
+    const latitude = 3.4491588030096203;
+    const longitude = 101.25282571100628;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+    window.open(googleMapsUrl, '_blank');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -21,37 +28,38 @@ export const HeroSection = () => {
         {/* Rating Badge */}
         <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 mr-1" />
-          4.9 • Superhost • 127 Reviews
+          4.8 • Rated in Google Maps
         </Badge>
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Welcome to Your
+          Selamat Datang
           <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-            Perfect Homestay
+            D'Kandang Homestay
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Experience authentic comfort in our beautifully designed space. 
-          Your home away from home awaits.
+          Merasai suasana kampung yang tenang dan nyaman, nikmati keindahan sawah di sekeliling kawasan.
         </p>
 
         {/* Location */}
         <div className="flex items-center justify-center text-white/80 mb-10">
           <MapPin className="w-5 h-5 mr-2" />
-          <span className="text-lg">Downtown Heritage District • 5 min to City Center</span>
+          <span className="text-lg">Tanjong Karang, Selangor</span>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="xl" className="min-w-48">
+          <Button 
+            variant="hero" 
+            size="xl" 
+            className="min-w-48"
+            onClick={handleDirectionsClick}
+          >
             <Calendar className="w-5 h-5 mr-2" />
-            Book Your Stay
-          </Button>
-          <Button variant="outline" size="xl" className="min-w-48 bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-            Virtual Tour
+            Google Maps Direction
           </Button>
         </div>
 
