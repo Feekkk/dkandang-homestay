@@ -222,7 +222,7 @@ export const ContactSection = () => {
               <p>
                 Website designed and developed for authentic homestay experiences.
                 <br className="hidden sm:block" />
-                Built using React, TypeScript, and modern web technologies.
+                Built by Solo Developers. Visit my GitHub for more projects. @Feekkk
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@ import {
   Cigarette, 
   Users, 
   Volume2, 
-  PawPrint, 
+  Activity, 
   Coffee,
   Heart,
   Shield
@@ -15,7 +15,7 @@ const rules = [
   {
     icon: Clock,
     title: "Flexible Check-in",
-    description: "Check-in: After 3 PM • Check-out: Before 11 AM",
+    description: "Check-in: After 12 PM • Check-out: Before 11 AM",
     detail: "Early check-in or late check-out available upon request",
     type: "positive"
   },
@@ -30,7 +30,7 @@ const rules = [
     icon: Users,
     title: "Guest Capacity",
     description: "Maximum 6 guests",
-    detail: "Additional guests may incur extra charges",
+    detail: "This apply for some rooms, please check room details",
     type: "neutral"
   },
   {
@@ -41,10 +41,10 @@ const rules = [
     type: "neutral"
   },
   {
-    icon: PawPrint,
-    title: "Pet Welcome",
-    description: "Well-behaved pets are welcome",
-    detail: "Small additional fee applies, please mention during booking",
+    icon: Activity,
+    title: "Activities",
+    description: "Customer have own responsibility if they want to do any activities",
+    detail: "There are a lot of activities available, please check our guidebook",
     type: "positive"
   },
   {
@@ -126,13 +126,13 @@ export const HouseRules = () => {
                   Your Safety & Security
                 </h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Our property features secure entry, smoke detectors, and emergency information. 
-                  We're available 24/7 for any questions or concerns during your stay.
+                  Our property features fencing and emergency information. 
+                  We're available for any questions or concerns during your stay.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />
-                    24/7 Host Support
+                    Surrounding Fencing
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />

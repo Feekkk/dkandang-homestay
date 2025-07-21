@@ -5,42 +5,42 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah & Mike",
-    location: "Toronto, Canada",
+    name: "Wan Afiq",
+    location: "Melaka, Malaysia",
     rating: 5,
-    date: "December 2023",
-    text: "Absolutely magical stay! The attention to detail was incredible, from the welcome basket to the cozy reading nook. Felt like staying with dear friends.",
-    highlight: "Felt like home"
+    date: "May 2022",
+    text: "Homestay terbaik untuk keluarga. Ruang tamu luas, dapur lengkap, dan bilik tidur sangat selesa. Kami sekeluarga sangat berpuas hati.",
+    highlight: "The best kampung experience"
   },
   {
-    name: "James Chen",
-    location: "Singapore",
+    name: "Nora Misri",
+    location: "Ipoh, Perak",
     rating: 5,
-    date: "November 2023", 
-    text: "Perfect location and beautifully designed space. The hosts went above and beyond to make sure we had everything we needed. The kitchen was a dream to cook in!",
-    highlight: "Perfect location"
+    date: "November 2025", 
+    text: "D'kandang homestay is hidden gems di Tanjong Karang. Anak-anak suka dengan permainan outdoor. Boleh repeat lagi!",
+    highlight: "Layanan owner terbaik"
   },
   {
-    name: "Emma & Family",
-    location: "Sydney, Australia",
+    name: "Muhd Azwan",
+    location: "Kuala Lumpur, Malaysia",
     rating: 5,
     date: "October 2023",
-    text: "Our kids loved the space and we felt so comfortable. The neighborhood is wonderful for walking, and the house has everything you could possibly need.",
+    text: "Sangat berbaloi dengan harga yang ditawarkan. Homestay ini sangat bersih dan selesa. Lokasi pun strategik, dekat dengan tempat menarik.",
     highlight: "Family perfect"
   },
   {
-    name: "David Rodriguez",
-    location: "Barcelona, Spain", 
+    name: "Azra Luqman",
+    location: "Dengkil, Selangor", 
     rating: 5,
     date: "September 2023",
-    text: "Exceptional hospitality and a truly unique space. The blend of vintage charm and modern amenities is perfect. Already planning our return visit!",
-    highlight: "Exceptional hospitality"
+    text: "Layanan yang sangat baik dan ruang yang unik. Sudah merancang untuk kunjungan kami yang seterusnya!",
+    highlight: "Layanan yang sangat baik"
   }
 ];
 
 export const GuestExperience = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-backgrounad">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-6 text-homestay-warm border-homestay-warm">
