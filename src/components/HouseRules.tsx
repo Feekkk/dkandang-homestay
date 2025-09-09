@@ -14,44 +14,44 @@ import {
 const rules = [
   {
     icon: Clock,
-    title: "Flexible Check-in",
-    description: "Check-in: After 12 PM • Check-out: Before 11 AM",
-    detail: "Early check-in or late check-out available upon request",
+    title: "Daftar Masuk Fleksibel",
+    description: "Daftar masuk: Selepas 12 tengah hari • Daftar keluar: Sebelum 11 pagi",
+    detail: "Daftar masuk awal atau daftar keluar lewat boleh diminta",
     type: "positive"
   },
   {
     icon: Cigarette,
-    title: "Smoke-Free Space",
-    description: "No smoking inside the house",
-    detail: "Outdoor patio area available for smokers",
+    title: "Ruang Bebas Asap Rokok",
+    description: "Dilarang merokok di dalam rumah",
+    detail: "Ruang patio luar disediakan untuk perokok",
     type: "neutral"
   },
   {
     icon: Users,
-    title: "Guest Capacity",
-    description: "Maximum 6 guests",
-    detail: "This apply for some rooms, please check room details",
+    title: "Kapasiti Tetamu",
+    description: "Maksimum 6 tetamu",
+    detail: "Ini terpakai untuk beberapa bilik, sila semak butiran bilik",
     type: "neutral"
   },
   {
     icon: Volume2,
-    title: "Quiet Hours",
-    description: "Respectful noise levels after 10 PM",
-    detail: "We're in a residential area with lovely neighbors",
+    title: "Waktu Senyap",
+    description: "Jaga tahap bunyi selepas 10 malam",
+    detail: "Kami berada di kawasan kediaman dengan jiran yang baik",
     type: "neutral"
   },
   {
     icon: Activity,
-    title: "Activities",
-    description: "Customer have own responsibility if they want to do any activities",
-    detail: "There are a lot of activities available, please check our guidebook",
+    title: "Aktiviti",
+    description: "Tetamu bertanggungjawab sendiri untuk sebarang aktiviti",
+    detail: "Banyak aktiviti disediakan, sila rujuk buku panduan kami",
     type: "positive"
   },
   {
     icon: Coffee,
-    title: "Kitchen Access",
-    description: "Full kitchen available 24/7",
-    detail: "Please clean up after use and be mindful of others",
+    title: "Akses Dapur",
+    description: "Dapur lengkap tersedia 24/7",
+    detail: "Sila bersihkan selepas guna dan hormati tetamu lain",
     type: "positive"
   }
 ];
@@ -63,17 +63,17 @@ export const HouseRules = () => {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-6 text-homestay-earth border-homestay-earth">
             <Heart className="w-4 h-4 mr-2" />
-            House Guidelines
+            Garis Panduan Rumah
           </Badge>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Simple Guidelines for a
-            <span className="block text-homestay-warm">Wonderful Stay</span>
+            Garis Panduan Mudah untuk
+            <span className="block text-homestay-warm">Penginapan Kami</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We believe in creating a comfortable, respectful environment for everyone. 
-            These friendly guidelines help ensure all our guests have an amazing experience.
+            Kami percaya dalam mewujudkan suasana yang selesa dan saling menghormati untuk semua. 
+            Garis panduan mesra ini membantu memastikan semua tetamu mendapat pengalaman yang terbaik.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export const HouseRules = () => {
                   </div>
                   {rule.type === 'positive' && (
                     <Badge variant="secondary" className="bg-green-100 text-green-700">
-                      Guest Friendly
+                      Mesra Tetamu
                     </Badge>
                   )}
                 </div>
@@ -123,28 +123,28 @@ export const HouseRules = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  Your Safety & Security
+                  Keselamatan & Sekuriti Anda
                 </h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Our property features fencing and emergency information. 
-                  We're available for any questions or concerns during your stay.
+                  Kawasan kami berpagar dan maklumat kecemasan disediakan. 
+                  Kami sentiasa bersedia untuk sebarang pertanyaan atau kebimbangan sepanjang penginapan anda.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />
-                    Surrounding Fencing
+                    Pagar Sekeliling
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />
-                    Secure Key Exchange
+                    Pertukaran Kunci Selamat
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />
-                    Emergency Contacts Provided
+                    Nombor Kecemasan Disediakan
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-homestay-warm rounded-full mr-3" />
-                    Local Area Guide Included
+                    Panduan Kawasan Tempatan Disertakan
                   </div>
                 </div>
               </div>

@@ -12,27 +12,27 @@ import c4 from "@/assets/c4.JPG";
 
 const rooms = [
 	{
-		title: "Master Bedroom",
-		subtitle: "King-size comfort",
-		capacity: "2 guests",
+		title: "Bilik Utama",
+		subtitle: "Keselesaan katil bersaiz king",
+		capacity: "2 tetamu",
 		image: c1,
 	},
 	{
-		title: "Cozy Twin Room",
-		subtitle: "Perfect for friends",
-		capacity: "2 guests",
+		title: "Bilik Twin Selesa",
+		subtitle: "Sesuai untuk rakan",
+		capacity: "2 tetamu",
 		image: c2,
 	},
 	{
-		title: "Living Area",
-		subtitle: "Relax & unwind",
-		capacity: "6 guests",
+		title: "Ruang Tamu",
+		subtitle: "Rehat & bersantai",
+		capacity: "6 tetamu",
 		image: c3,
 	},
 	{
-		title: "Modern Kitchen",
-		subtitle: "Cook like a local",
-		capacity: "6 guests",
+		title: "Dapur Moden",
+		subtitle: "Masak seperti orang tempatan",
+		capacity: "6 tetamu",
 		image: c4,
 	},
 ];
@@ -49,12 +49,12 @@ export const RoomsSpaces = () => {
 			<div className="container mx-auto px-6">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-						Thoughtfully Designed
-						<span className="block text-homestay-warm">Spaces & Rooms</span>
+						Direka Dengan Teliti
+						<span className="block text-homestay-warm">Ruang & Bilik</span>
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-						Each space tells a story, designed with your comfort and experience in mind.
-						From restful bedrooms to gathering spaces that bring people together.
+						Setiap ruang mempunyai cerita, direka khas untuk keselesaan dan pengalaman anda.
+						Dari bilik tidur yang menenangkan hingga ruang berkumpul yang mengeratkan hubungan.
 					</p>
 				</div>
 
@@ -99,14 +99,14 @@ export const RoomsSpaces = () => {
 								</div>
 
 								<div className="mb-6">
-									{/* Features removed, left blank intentionally */}
+									{/* Ciri-ciri telah dibuang, dibiarkan kosong */}
 								</div>
 							</CardContent>
 						</Card>
 					))}
 				</div>
 
-				{/* View More Button */}
+				{/* Butang Lihat Lebih Lanjut */}
 				<div className="text-center mt-12">
 					<Button
 						variant="warm"
@@ -114,7 +114,7 @@ export const RoomsSpaces = () => {
 						onClick={handleViewMore}
 						className="min-w-48"
 					>
-						View More Details
+						Lihat Maklumat Lanjut
 						<ArrowRight className="w-5 h-5 ml-2" />
 					</Button>
 				</div>

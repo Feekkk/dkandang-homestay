@@ -8,25 +8,25 @@ const testimonials = [
     name: "Wan Afiq",
     location: "Melaka, Malaysia",
     rating: 5,
-    date: "May 2022",
+    date: "Mei 2022",
     text: "Homestay terbaik untuk keluarga. Ruang tamu luas, dapur lengkap, dan bilik tidur sangat selesa. Kami sekeluarga sangat berpuas hati.",
-    highlight: "The best kampung experience"
+    highlight: "Pengalaman kampung terbaik"
   },
   {
     name: "Nora Misri",
     location: "Ipoh, Perak",
     rating: 5,
     date: "November 2025", 
-    text: "D'kandang homestay is hidden gems di Tanjong Karang. Anak-anak suka dengan permainan outdoor. Boleh repeat lagi!",
-    highlight: "Layanan owner terbaik"
+    text: "D'kandang homestay adalah permata tersembunyi di Tanjong Karang. Anak-anak suka dengan permainan luar. Pasti akan datang lagi!",
+    highlight: "Layanan pemilik terbaik"
   },
   {
     name: "Muhd Azwan",
     location: "Kuala Lumpur, Malaysia",
     rating: 5,
-    date: "October 2023",
+    date: "Oktober 2023",
     text: "Sangat berbaloi dengan harga yang ditawarkan. Homestay ini sangat bersih dan selesa. Lokasi pun strategik, dekat dengan tempat menarik.",
-    highlight: "Family perfect"
+    highlight: "Sangat sesuai untuk keluarga"
   },
   {
     name: "Azra Luqman",
@@ -45,17 +45,17 @@ export const GuestExperience = () => {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-6 text-homestay-warm border-homestay-warm">
             <Star className="w-4 h-4 mr-2 fill-current" />
-            4.9 Average Rating
+            4.9 Penilaian Purata
           </Badge>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Stories from Our
-            <span className="block text-homestay-warm">Cherished Guests</span>
+            Review Dari
+            <span className="block text-homestay-warm">Tetamu Kami</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Nothing makes us happier than hearing about the wonderful memories 
-            created during each stay. Here's what our guests have to say.
+            Tiada yang lebih membahagiakan kami selain mendengar kenangan indah
+            yang tercipta setiap kali menginap. Ini kata mereka tentang homestay kami.
           </p>
         </div>
 
@@ -104,23 +104,23 @@ export const GuestExperience = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
+        {/* Bahagian Statistik */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-3xl font-bold text-homestay-warm mb-2">500+</div>
-            <div className="text-muted-foreground">Happy Guests</div>
+            <div className="text-muted-foreground">Tetamu Gembira</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-homestay-warm mb-2">4.9</div>
-            <div className="text-muted-foreground">Average Rating</div>
+            <div className="text-muted-foreground">Penilaian Purata</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-homestay-warm mb-2">98%</div>
-            <div className="text-muted-foreground">Return Rate</div>
+            <div className="text-muted-foreground">Kadar Kembali</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-homestay-warm mb-2">127</div>
-            <div className="text-muted-foreground">5-Star Reviews</div>
+            <div className="text-muted-foreground">Ulasan 5-Bintang</div>
           </div>
         </div>
       </div>
