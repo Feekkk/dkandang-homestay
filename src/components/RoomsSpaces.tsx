@@ -1,33 +1,39 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Bed, Bath, Users, Maximize, Sofa, UtensilsCrossed, ArrowRight } from "lucide-react";
+import { Users, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+import c1 from "@/assets/c1.JPG";
+import c2 from "@/assets/c2.JPG";
+import c3 from "@/assets/c3.JPG";
+import c4 from "@/assets/c4.JPG";
 
 const rooms = [
 	{
 		title: "Master Bedroom",
 		subtitle: "King-size comfort",
 		capacity: "2 guests",
-		gradient: "from-homestay-warm to-accent",
+		image: c1,
 	},
 	{
 		title: "Cozy Twin Room",
 		subtitle: "Perfect for friends",
 		capacity: "2 guests",
-		gradient: "from-homestay-sage to-homestay-warm",
+		image: c2,
 	},
 	{
 		title: "Living Area",
 		subtitle: "Relax & unwind",
 		capacity: "6 guests",
-		gradient: "from-homestay-cream to-homestay-sage",
+		image: c3,
 	},
 	{
 		title: "Modern Kitchen",
 		subtitle: "Cook like a local",
 		capacity: "6 guests",
-		gradient: "from-accent to-homestay-cream",
+		image: c4,
 	},
 ];
 
@@ -58,12 +64,13 @@ export const RoomsSpaces = () => {
 							key={index}
 							className="overflow-hidden border-0 shadow-hover hover:shadow-warm transition-all duration-500 group"
 						>
-							<div
-								className={`h-48 bg-gradient-to-br ${room.gradient} relative`}
-							>
+							<div className="h-48 relative">
+								<img
+									src={room.image}
+									alt={room.title}
+									className="w-full h-full object-cover"
+								/>
 								<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
-								<div className="absolute top-4 left-4">
-								</div>
 								<div className="absolute top-4 right-4">
 									<Badge
 										variant="secondary"
