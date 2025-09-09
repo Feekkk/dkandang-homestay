@@ -24,46 +24,47 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+import c1 from "@/assets/c1.JPG";
+import c2 from "@/assets/c2.JPG";
+import c3 from "@/assets/c3.JPG";
+import c4 from "@/assets/c4.JPG";
+
 const rooms = [
   {
     title: "Master Bedroom",
     subtitle: "King-size comfort with ensuite",
     features: ["King Size Bed", "Private Bathroom", "Air Conditioning", "Wardrobe", "Garden View"],
     capacity: "2 guests",
-    size: "320 sq ft",
     icon: Bed,
-    gradient: "from-homestay-warm to-accent",
-    description: "Our spacious master bedroom offers the perfect retreat after a day of exploring. Wake up to beautiful garden views and enjoy the comfort of premium bedding."
+    description: "Our spacious master bedroom offers the perfect retreat after a day of exploring. Wake up to beautiful garden views and enjoy the comfort of premium bedding.",
+    photo: c1
   },
   {
     title: "Cozy Twin Room",
     subtitle: "Perfect for friends or family",
     features: ["Two Single Beds", "Shared Bathroom", "Fan Cooling", "Storage Space", "Rice Field View"],
     capacity: "2 guests",
-    size: "280 sq ft",
     icon: Bed,
-    gradient: "from-homestay-sage to-homestay-warm",
-    description: "Ideal for friends or family members, this cozy room overlooks the serene rice fields. Simple comfort with authentic kampung charm."
+    description: "Ideal for friends or family members, this cozy room overlooks the serene rice fields. Simple comfort with authentic kampung charm.",
+    photo: c2
   },
   {
     title: "Living Area",
     subtitle: "Shared space for relaxation",
     features: ["Comfortable Seating", "Smart TV", "Reading Corner", "Board Games", "Air Conditioning"],
     capacity: "6 guests",
-    size: "450 sq ft",
     icon: Sofa,
-    gradient: "from-homestay-cream to-homestay-sage",
-    description: "Our welcoming living area is perfect for family gatherings, movie nights, or simply relaxing with a good book."
+    description: "Our welcoming living area is perfect for family gatherings, movie nights, or simply relaxing with a good book.",
+    photo: c3
   },
   {
     title: "Modern Kitchen",
     subtitle: "Cook authentic local meals",
     features: ["Full Kitchen", "Dining Table", "Coffee Station", "Cooking Utensils", "Refrigerator"],
     capacity: "6 guests",
-    size: "200 sq ft",
     icon: UtensilsCrossed,
-    gradient: "from-accent to-homestay-cream",
-    description: "Fully equipped kitchen where you can prepare your own meals or try cooking traditional Malaysian dishes with ingredients from local markets."
+    description: "Fully equipped kitchen where you can prepare your own meals or try cooking traditional Malaysian dishes with ingredients from local markets.",
+    photo: c4
   },
 ];
 
@@ -158,7 +159,12 @@ const Rooms = () => {
             <div className="grid lg:grid-cols-2 gap-8">
               {rooms.map((room, index) => (
                 <Card key={index} className="overflow-hidden border-0 shadow-hover hover:shadow-warm transition-all duration-500 group">
-                  <div className={`h-48 bg-gradient-to-br ${room.gradient} relative`}>
+                  <div className="h-48 relative">
+                    <img
+                      src={room.photo}
+                      alt={room.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
                     <div className="absolute top-4 left-4">
                       <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
@@ -180,17 +186,6 @@ const Rooms = () => {
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {room.description}
                     </p>
-
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Users className="w-4 h-4 mr-2" />
-                        {room.capacity}
-                      </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Maximize className="w-4 h-4 mr-2" />
-                        {room.size}
-                      </div>
-                    </div>
 
                     <div className="mb-6">
                       <h4 className="font-semibold text-foreground mb-3">Room Features</h4>
