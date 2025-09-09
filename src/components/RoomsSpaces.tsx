@@ -8,37 +8,25 @@ const rooms = [
 	{
 		title: "Master Bedroom",
 		subtitle: "King-size comfort",
-		features: ["King Bed", "En-suite Bath", "City View", "Work Desk"],
 		capacity: "2 guests",
-		size: "320 sq ft",
-		icon: Bed,
 		gradient: "from-homestay-warm to-accent",
 	},
 	{
 		title: "Cozy Twin Room",
 		subtitle: "Perfect for friends",
-		features: ["Two Single Beds", "Shared Bath", "Garden View", "Reading Nook"],
 		capacity: "2 guests",
-		size: "280 sq ft",
-		icon: Bed,
 		gradient: "from-homestay-sage to-homestay-warm",
 	},
 	{
 		title: "Living Area",
 		subtitle: "Relax & unwind",
-		features: ["Comfortable Sofa", "Smart TV", "Reading Corner", "Board Games"],
 		capacity: "6 guests",
-		size: "450 sq ft",
-		icon: Sofa,
 		gradient: "from-homestay-cream to-homestay-sage",
 	},
 	{
 		title: "Modern Kitchen",
 		subtitle: "Cook like a local",
-		features: ["Full Appliances", "Dining Table", "Coffee Station", "Cooking Essentials"],
 		capacity: "6 guests",
-		size: "200 sq ft",
-		icon: UtensilsCrossed,
 		gradient: "from-accent to-homestay-cream",
 	},
 ];
@@ -75,9 +63,6 @@ export const RoomsSpaces = () => {
 							>
 								<div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
 								<div className="absolute top-4 left-4">
-									<div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-										<room.icon className="w-6 h-6 text-white" />
-									</div>
 								</div>
 								<div className="absolute top-4 right-4">
 									<Badge
@@ -104,35 +89,11 @@ export const RoomsSpaces = () => {
 										<Users className="w-4 h-4 mr-2" />
 										{room.capacity}
 									</div>
-									<div className="flex items-center text-sm text-muted-foreground">
-										<Maximize className="w-4 h-4 mr-2" />
-										{room.size}
-									</div>
 								</div>
 
 								<div className="mb-6">
-									<h4 className="font-semibold text-foreground mb-3">
-										Features
-									</h4>
-									<div className="grid grid-cols-2 gap-2">
-										{room.features.map((feature, featureIndex) => (
-											<div
-												key={featureIndex}
-												className="text-sm text-muted-foreground flex items-center"
-											>
-												<div className="w-1.5 h-1.5 bg-homestay-warm rounded-full mr-2" />
-												{feature}
-											</div>
-										))}
-									</div>
+									{/* Features removed, left blank intentionally */}
 								</div>
-
-								<Button
-									variant="outline"
-									className="w-full group-hover:bg-homestay-warm group-hover:text-white group-hover:border-homestay-warm transition-all duration-300"
-								>
-									View Gallery
-								</Button>
 							</CardContent>
 						</Card>
 					))}
